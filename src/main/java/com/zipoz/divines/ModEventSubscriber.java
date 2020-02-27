@@ -1,5 +1,6 @@
 package com.zipoz.divines;
 
+import com.zipoz.divines.init.ModItemGroups;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
@@ -13,7 +14,7 @@ public class ModEventSubscriber {
     @SubscribeEvent
     public static void onRegisterItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(
-                setup(new Item(new Item.Properties()), "example_item")
+                setup(new Item(new Item.Properties().group(ModItemGroups.DIVINES_GROUP)), "recondite_myst")
         );
 
     }
